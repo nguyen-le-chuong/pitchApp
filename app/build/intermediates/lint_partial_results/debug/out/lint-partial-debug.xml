@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.3.1" type="partial_results">
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="id[cAInput(U),roadSlopeValue(U),minusNumR2(U),minusAccelStd(U),plusNumR2(U),corInput(U),pitchMinusSlopeValue(U),plusGyroBias(U),initVelStdInput(U),gyroStdInput(U),minusGyroStd(U),accelBiasInput(U),minusGyroBias(U),minusAccelBias(U),resetButton(U),minusCor(U),minusInitVelStd(U),plusNumNG(U),plusCor(U),numNGInput(U),gyroBiasInput(U),pitchValue(U),plusInitVelStd(U),minusCA(U),plusAccelBias(U),numR2Input(U),accelStdInput(U),plusAccelStd(U),plusGyroStd(U),plusCA(U),minusNumNG(U)],layout[activity_main(U)];;;;"/>
+    </map>
+
+</incidents>

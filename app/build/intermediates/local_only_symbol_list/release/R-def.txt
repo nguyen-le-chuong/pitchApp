@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+id accelBiasInput
+id accelStdInput
+id cAInput
+id corInput
+id gyroBiasInput
+id gyroStdInput
+id initVelStdInput
+id minusAccelBias
+id minusAccelStd
+id minusCA
+id minusCor
+id minusGyroBias
+id minusGyroStd
+id minusInitVelStd
+id minusNumNG
+id minusNumR2
+id numNGInput
+id numR2Input
+id pitchMinusSlopeValue
+id pitchValue
+id plusAccelBias
+id plusAccelStd
+id plusCA
+id plusCor
+id plusGyroBias
+id plusGyroStd
+id plusInitVelStd
+id plusNumNG
+id plusNumR2
+id resetButton
+id roadSlopeValue
+layout activity_main

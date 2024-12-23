@@ -1,0 +1,4 @@
+#Mon Dec 23 17:23:35 ICT 2024
+base.0=/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

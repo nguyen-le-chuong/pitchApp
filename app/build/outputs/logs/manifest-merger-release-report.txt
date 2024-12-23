@@ -1,0 +1,139 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/dbd1b1bd59ee9b7c82700448bfbb76f6/transformed/constraintlayout-2.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da69f8afad5675148539c3d82953b173/transformed/appcompat-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/chuongnl1/.gradle/caches/8.9/transforms/26c15ea61453cdabb64b4043757857b7/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] /home/chuongnl1/.gradle/caches/8.9/transforms/379301e64e9af069c90f8de6c62a4109/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/5e19ae1f95161ffd65b08c654901afa5/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3a042eb872c9448dcb2d3ebcaa43789b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/ec40d087f6fc05aefa164dc616b05b98/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3ade260c6f84656b89fc795e536174c1/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/095fe4faefc2c35b426fb0f9c88d8fcf/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b0e5afed51f732b386a63fa636f5ffb8/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/041e2708ab52732ae5753eac7f3f360e/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/6f59b7d1adbcd9a3953e6d7fdc2e3939/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/cee525b1da0309b93e3df72149a447b2/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b48c855eeafd68ae87b65eda1ee4ea7d/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/350afd6c07da3a2e98e229c970ed00aa/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da2164bf96cce1cb976584b34657f421/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/chuongnl1/.gradle/caches/8.9/transforms/a4771d4ebbd364eda1b44cb2b3965365/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b2f382c508fdeb4f6a2a5a9ae8847e13/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/d72939d85388185dbc8e5eded3e56c68/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/fc3628a2eef7e69de132e5f9433db105/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0314be77e4d885270858c4d2c71beba2/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/9f0a4ac676945732085901cfe1b46ddc/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0f96cdd4903b66282c9f0e3e0e00f1ff/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+	package
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:2:5-38
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:1-16:12
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:4:5-14:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/dbd1b1bd59ee9b7c82700448bfbb76f6/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/dbd1b1bd59ee9b7c82700448bfbb76f6/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/chuongnl1/.gradle/caches/8.9/transforms/a4771d4ebbd364eda1b44cb2b3965365/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/chuongnl1/.gradle/caches/8.9/transforms/a4771d4ebbd364eda1b44cb2b3965365/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:6:9-35
+	android:allowBackup
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:5:9-35
+activity#com.example.pitchApp_v2.MainActivity
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:7:9-13:20
+	android:exported
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:8:9-32
+	android:name
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:7:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:9:13-12:29
+action#android.intent.action.MAIN
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:10:17-69
+	android:name
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:10:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:11:17-77
+	android:name
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml:11:27-74
+uses-sdk
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/dbd1b1bd59ee9b7c82700448bfbb76f6/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/dbd1b1bd59ee9b7c82700448bfbb76f6/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da69f8afad5675148539c3d82953b173/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da69f8afad5675148539c3d82953b173/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/chuongnl1/.gradle/caches/8.9/transforms/26c15ea61453cdabb64b4043757857b7/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/chuongnl1/.gradle/caches/8.9/transforms/26c15ea61453cdabb64b4043757857b7/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] /home/chuongnl1/.gradle/caches/8.9/transforms/379301e64e9af069c90f8de6c62a4109/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] /home/chuongnl1/.gradle/caches/8.9/transforms/379301e64e9af069c90f8de6c62a4109/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/5e19ae1f95161ffd65b08c654901afa5/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/5e19ae1f95161ffd65b08c654901afa5/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3a042eb872c9448dcb2d3ebcaa43789b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3a042eb872c9448dcb2d3ebcaa43789b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/ec40d087f6fc05aefa164dc616b05b98/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/ec40d087f6fc05aefa164dc616b05b98/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3ade260c6f84656b89fc795e536174c1/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/3ade260c6f84656b89fc795e536174c1/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/095fe4faefc2c35b426fb0f9c88d8fcf/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/095fe4faefc2c35b426fb0f9c88d8fcf/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b0e5afed51f732b386a63fa636f5ffb8/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b0e5afed51f732b386a63fa636f5ffb8/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/041e2708ab52732ae5753eac7f3f360e/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/041e2708ab52732ae5753eac7f3f360e/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] /home/chuongnl1/.gradle/caches/8.9/transforms/e711d3aad18e9e18bbcd0013ec1466d4/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/6f59b7d1adbcd9a3953e6d7fdc2e3939/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/6f59b7d1adbcd9a3953e6d7fdc2e3939/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/cee525b1da0309b93e3df72149a447b2/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/cee525b1da0309b93e3df72149a447b2/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b48c855eeafd68ae87b65eda1ee4ea7d/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b48c855eeafd68ae87b65eda1ee4ea7d/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/350afd6c07da3a2e98e229c970ed00aa/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/350afd6c07da3a2e98e229c970ed00aa/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da2164bf96cce1cb976584b34657f421/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/da2164bf96cce1cb976584b34657f421/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/chuongnl1/.gradle/caches/8.9/transforms/a4771d4ebbd364eda1b44cb2b3965365/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/chuongnl1/.gradle/caches/8.9/transforms/a4771d4ebbd364eda1b44cb2b3965365/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b2f382c508fdeb4f6a2a5a9ae8847e13/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/b2f382c508fdeb4f6a2a5a9ae8847e13/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/d72939d85388185dbc8e5eded3e56c68/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/d72939d85388185dbc8e5eded3e56c68/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/fc3628a2eef7e69de132e5f9433db105/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/chuongnl1/.gradle/caches/8.9/transforms/fc3628a2eef7e69de132e5f9433db105/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0314be77e4d885270858c4d2c71beba2/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0314be77e4d885270858c4d2c71beba2/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/9f0a4ac676945732085901cfe1b46ddc/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/9f0a4ac676945732085901cfe1b46ddc/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0f96cdd4903b66282c9f0e3e0e00f1ff/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/chuongnl1/.gradle/caches/8.9/transforms/0f96cdd4903b66282c9f0e3e0e00f1ff/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		ADDED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/chuongnl1/project/pitchApp_v2/app/src/main/AndroidManifest.xml

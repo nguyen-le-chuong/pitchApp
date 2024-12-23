@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.pitchApp_v2"
+        minSdk 21
+        targetSdk 33
+
+        versionCode 1
+        versionName "1.0"
+
+        // Enables support for native libraries and CMake
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+            }
+        }
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a' // Include only the architectures you need
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            targets "CMakeLists.txt" // Make sure this points to your CMakeLists.txt
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs'] // Specify where the .so files are stored
+            jni.srcDirs = [] // Disable automatic NDK compilation from src/main/jni
+        }
+    }
+
+    buildFeatures {
+        prefab true // Enable Prefab support
+    }
+
+    packagingOptions {
+        pickFirst '**/libc++_shared.so' // Avoid multiple libc++ shared library issues
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}
