@@ -71,23 +71,23 @@
 #include <jni.h>
 #include <string>
 #include <Eigen/Dense>
-#include "Simulation.h"
+#include "simulation.h"
 
 static Simulation mSimulation;
 static time_t prev_ts = 0;
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_example_pitchApp_v2_MainActivity_initKalman(JNIEnv *env, jobject /* this */) {
+Java_com_example_pitchApp_v2_MainActivity_initKalman(JNIEnv *env, jobject /* this */, jdouble cor) {
     Eigen::VectorXd RotationState(3);
     Eigen::VectorXd SlopeState(3);
-    Eigen::MatrixXd cov = Eigen::MatrixXd::Identity(3, 3) * 0.01;
+    Eigen::MatrixXd cov = Eigen::MatrixXd::Identity(3, 3) * cor;
 
     RotationState << 0, 0, 1;
     SlopeState << 0, 0, 0;
 
     // Reset the simulation with initial values
-    mSimulation.reset(loadSimulation4Parameters(), RotationState, SlopeState, cov);
+    mSimulation.reset(RotationState, SlopeState, cov);
 }
 
 extern "C"
@@ -98,14 +98,14 @@ Java_com_example_pitchApp_v2_MainActivity_setKalmanParameters(
         jdoubleArray parameters) {
 
     jsize length = env->GetArrayLength(parameters);
-    if (length != 11) return;  // Ensure the array has the correct number of parameters
+    if (length != 9) return;  // Ensure the array has the correct number of parameters
 
     jdouble *params = env->GetDoubleArrayElements(parameters, nullptr);
 
     // Set the parameters in the simulation
-    mSimulation.setParameters(
+    mSimulation.setKalmanParameters(loadSimulation4Parameters(), 
             params[0], params[1], params[2], params[3], params[4],
-            params[5], params[6], params[7], params[8], params[9], params[10]
+            params[5], params[6], params[7], params[8]
     );
 
     env->ReleaseDoubleArrayElements(parameters, params, 0);

@@ -1,0 +1,19 @@
+                    -H/home/chuongnl1/project/pitchApp_v2/app/src/main/cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=armeabi-v7a
+-DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
+-DANDROID_NDK=/home/chuongnl1/Android/Sdk/ndk/23.1.7779620
+-DCMAKE_ANDROID_NDK=/home/chuongnl1/Android/Sdk/ndk/23.1.7779620
+-DCMAKE_TOOLCHAIN_FILE=/home/chuongnl1/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/home/chuongnl1/Android/Sdk/cmake/3.30.3/bin/ninja
+-DCMAKE_CXX_FLAGS=-std=c++11
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/RelWithDebInfo/3y323m4u/obj/armeabi-v7a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/RelWithDebInfo/3y323m4u/obj/armeabi-v7a
+-DCMAKE_BUILD_TYPE=RelWithDebInfo
+-B/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/armeabi-v7a
+-GNinja
+                    Build command args: []
+                    Version: 2

@@ -11,15 +11,11 @@
 
 // -------------------------------------------------- //
 // YOU CAN USE AND MODIFY THESE CONSTANTS HERE
-double ACCEL_STD = 0.05;
-double GYRO_STD = 0.001;
-double INIT_VEL_STD = 1;
-double INIT_PSI_STD = 45.0/180.0 * M_PI;
-double GPS_POS_STD = 3.0;
-double LIDAR_RANGE_STD = 3.0;
-double LIDAR_THETA_STD = 0.02;
+// double getAccel_std() = 0.05;
+// double getGyro_std() = 0.001;
+// double getInit_vel_std() = 1;
 // -------------------------------------------------- //
-// MatrixXd R = Matrix2d::Identity() * GYRO_STD * INIT_VEL_STD + Matrix2d::Identity() * ACCEL_STD;
+// MatrixXd R = Matrix2d::Identity() * getGyro_std() * getInit_vel_std() + Matrix2d::Identity() * getAccel_std();
 // MatrixXd R2 = MatrixXd::Constant(1, 1, 0.01);
 
 
@@ -34,9 +30,9 @@ void KalmanFilterRoadSlope::predictionStep(double dt)
         MatrixXd F_noise(3, 2);
         MatrixXd W(2, 1);
 
-        Q << ACCEL_STD, 0, 0,
-            0, INIT_VEL_STD, 0,
-            0, 0, GYRO_STD;
+        Q << getAccel_std(), 0, 0,
+            0, getInit_vel_std(), 0,
+            0, 0, getGyro_std();
         
         F << 1, 0, 0,
             dt, 1, 0,
@@ -46,7 +42,7 @@ void KalmanFilterRoadSlope::predictionStep(double dt)
                     dt, 0,
                     0, dt;
 
-        W << ACCEL_STD, GYRO_STD;
+        W << getAccel_std(), getGyro_std();
 
         state = F * state + F_noise * W;
 
@@ -75,8 +71,8 @@ void KalmanFilterRoadSlope::measurementStep(AccelMeasurement accel, GyroMeasurem
 
         VectorXd y = z - H * state;
         Matrix2d R;
-        R << ACCEL_STD, 0,
-            0, INIT_VEL_STD;
+        R << getAccel_std(), 0,
+            0, getInit_vel_std();
         MatrixXd S = H * cov * H.transpose() + R;
         MatrixXd K = cov * H.transpose() * S.inverse();
 
@@ -109,5 +105,12 @@ SlopeState KalmanFilterRoadSlope::getVehicleState()
         return SlopeState(state[0], state[1], state[2], slope_degree);
     }
     return SlopeState();
+}
+
+void KalmanFilterRoadSlope::setParameters(double accel_std, double gyro_std, double init_vel_std)
+{
+    setAccelNoiseStd(accel_std);   
+    setGyroNoiseStd(gyro_std);
+    setInitVelNoiseStd(init_vel_std);
 }
 

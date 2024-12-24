@@ -60,13 +60,15 @@ void Simulation::reset(VectorXd RotationState, VectorXd SlopeState, MatrixXd cov
     std::cout << "Simulation: Reset" << std::endl;
 }
 
-void Simulation::setKalmanParameters(double gyro_noise_std, double gyro_bias, double accel_noise_std, double accel_bias, double odo_noise_std, double odo_bias, double c_a, double num_R2, double num_nG, double accel_bias_std, double gyro_bias_std)
+void Simulation::setKalmanParameters(SimulationParams sim_params, double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias, double cor)
 {
-    m_sim_parameters.gyro_noise_std = gyro_noise_std;
+    SimulationParams m_sim_parameters = sim_params;
+    m_sim_parameters.gyro_noise_std = gyro_std;
     m_sim_parameters.gyro_bias = gyro_bias;
-    m_sim_parameters.accel_noise_std = accel_noise_std;
+    m_sim_parameters.accel_noise_std = accel_std;
     m_sim_parameters.accel_bias = accel_bias;
-    m_kalman_filter.setKalmanParameters(c_a, num_R2, num_nG, accel_bias_std, gyro_bias_std);
+    m_kalman_filter.setParameters(accel_std, gyro_std, init_vel_std, c_a, num_R2, num_nG, accel_bias, gyro_bias);
+    m_road_slope.setParameters(accel_std, gyro_std, init_vel_std);
     // m_sim_parameters.odo_noise_std = odo_noise_std;
     // m_sim_parameters.odo_bias = odo_bias;
     // m_sim_parameters.c_a = c_a;
@@ -233,7 +235,7 @@ double Simulation::returnPitch(){
 double Simulation::returnSlope(){
     return m_road_slope.getVehicleState().slope;
 }
-void Simulation::reset(SimulationParams sim_params, VectorXd RotationState, VectorXd SlopeState, MatrixXd cov){m_sim_parameters = sim_params; reset(RotationState, SlopeState, cov);}
+// void Simulation::reset(VectorXd RotationState, VectorXd SlopeState, MatrixXd cov){reset(RotationState, SlopeState, cov);}
 void Simulation::increaseTimeMultiplier()
 {
     m_time_multiplier++;
@@ -265,3 +267,17 @@ void Simulation::togglePauseSimulation()
 }
 bool Simulation::isPaused(){return m_is_paused;}
 bool Simulation::isRunning(){return m_is_running;}
+
+SimulationParams loadSimulation4Parameters()
+{    
+    SimulationParams sim_params;
+    sim_params.profile_name = "4 - Variable Speed Profile + GPS + GYRO";
+    sim_params.end_time = 200;
+    sim_params.car_initial_velocity = 0;
+    sim_params.odo_enabled = true;
+    sim_params.gyro_enabled = true;
+    sim_params.accel_enabled = true;
+    // sim_params.car_initial_psi = M_PI/180.0 * 45.0;
+
+    return sim_params;
+}

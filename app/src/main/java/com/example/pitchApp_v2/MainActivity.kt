@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var lastTimestamp: Long = 0
 
     // Native methods
-    private external fun initKalman()
+    private external fun initKalman(cor: Float)
     private external fun setKalmanParameters(accelStd: Float, gyroStd: Float, accelBias: Float, gyroBias: Float, initVel: Float, cA: Float, numR2: Float, numNG: Float, cor: Float)
     private external fun updateKalmanState(accData: FloatArray, gyroData: FloatArray, timestamp: Long): PitchSlopeResult
 
@@ -133,9 +133,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val numNGInput = findViewById<EditText>(R.id.numNGInput)
         val corInput = findViewById<EditText>(R.id.corInput)
 
-        val pitchTextView = findViewById<TextView>(R.id.pitchValue)
-        val slopeTextView = findViewById<TextView>(R.id.roadSlopeValue)
-        val pitchMinusSlopeTextView = findViewById<TextView>(R.id.pitchMinusSlopeValue)
+        // val pitchTextView = findViewById<TextView>(R.id.pitchValue)
+        // val slopeTextView = findViewById<TextView>(R.id.roadSlopeValue)
+        // val pitchMinusSlopeTextView = findViewById<TextView>(R.id.pitchMinusSlopeValue)
 
         val btnReset = findViewById<Button>(R.id.resetButton)
         val btnIncAccelStd = findViewById<Button>(R.id.plusAccelStd)
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val cor = corInput.text.toString().toFloatOrNull() ?: 0.0f
 
             setKalmanParameters(accelStd, gyroStd, accelBias, gyroBias, initVel, cA, numR2, numNG, cor)
-            initKalman()
+            initKalman(cor)
         }
 
         // Set up increment and decrement buttons

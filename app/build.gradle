@@ -4,21 +4,30 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.pitchApp_v2"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
-
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+            }
+        }
         ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
 
     }
-
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt" // Path to your CMakeLists.txt
+            version "3.30.3" // Ensure you have the correct CMake version installed
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -30,7 +39,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs'] // Location for the output .so files
+        }
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }

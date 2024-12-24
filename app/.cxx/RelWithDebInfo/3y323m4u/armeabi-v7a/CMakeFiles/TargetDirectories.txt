@@ -1,0 +1,3 @@
+/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/armeabi-v7a/CMakeFiles/native-lib.dir
+/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/armeabi-v7a/CMakeFiles/rebuild_cache.dir

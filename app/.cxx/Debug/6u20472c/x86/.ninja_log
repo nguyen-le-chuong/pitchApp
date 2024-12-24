@@ -1,0 +1,10 @@
+# ninja log v5
+0	2432	1735028018981850211	CMakeFiles/native-lib.dir/utils.cpp.o	3419d414190b512a
+2	2731	1735028019290838884	CMakeFiles/native-lib.dir/sensors.cpp.o	e7596b50b8aa7bba
+1	3140	1735028019697823966	CMakeFiles/native-lib.dir/native-lib.cpp.o	4a911dc7b55d2adf
+6	3645	1735028020198805601	CMakeFiles/native-lib.dir/simulation.cpp.o	a2eda83755e259f8
+6	3721	1735028020275802779	CMakeFiles/native-lib.dir/readData.cpp.o	124531bba64b41ec
+10	6881	1735028023408687938	CMakeFiles/native-lib.dir/filterroad.cpp.o	7a5bb90fb839ac9c
+2	7382	1735028023906669684	CMakeFiles/native-lib.dir/kalmanfilter.cpp.o	2d807a8eda2234d8
+7382	7493	1735028024047664515	/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/Debug/6u20472c/obj/x86/libnative-lib.so	e240f6200fde3d60
+0	6	0	clean	4e057469222ccf85

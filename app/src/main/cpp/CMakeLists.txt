@@ -1,12 +1,13 @@
-
-cmake_minimum_required(VERSION 3.10.2)
-
+cmake_minimum_required(VERSION 3.5)
 project(native-lib)
 
-set(SRC_DIR src/main/cpp)
+set(CMAKE_CXX_STANDARD 14)
 
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+# include_directories("/home/eigen-doc") 
+set(Eigen3_DIR "/home/Eigen3/share/eigen3/cmake")
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
+set(SRC_DIR ${CMAKE_SOURCE_DIR})
 set(SOURCES
     ${SRC_DIR}/native-lib.cpp
     ${SRC_DIR}/kalmanfilter.cpp
@@ -15,14 +16,13 @@ set(SOURCES
     ${SRC_DIR}/simulation.cpp
     ${SRC_DIR}/readData.cpp
     ${SRC_DIR}/filterroad.cpp
-    ${SRC_DIR}/kalmanfilter.h
-    ${SRC_DIR}/utils.h
-    ${SRC_DIR}/sensors.h
-    ${SRC_DIR}/simulation.h
-    ${SRC_DIR}/readData.h
-    ${SRC_DIR}/filterroad.h
-    ${SRC_DIR}/roadslope.h
-    ${SRC_DIR}/roadslope.cpp
+    # ${SRC_DIR}/kalmanfilter.h
+    # ${SRC_DIR}/utils.h
+    # ${SRC_DIR}/sensors.h
+    # ${SRC_DIR}/simulation.h
+    # ${SRC_DIR}/readData.h
+    # ${SRC_DIR}/filterroad.h
+    # ${SRC_DIR}/roadslope.h
 )
 
 add_library(
@@ -43,7 +43,6 @@ find_library(
 target_link_libraries(${PROJECT_NAME}
         Eigen3::Eigen
         )
-
 target_link_libraries(
     native-lib
     ${log-lib}

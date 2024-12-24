@@ -13,14 +13,14 @@
 // -------------------------------------------------- //
 // YOU CAN USE AND MODIFY THESE CONSTANTS HERE
 // constexpr double ACCEL_STD = 1;
-// constexpr double GYRO_STD = 0.02 / 180 * M_PI;
+// constexpr double getGyro_std() = 0.02 / 180 * M_PI;
 // constexpr double INIT_VEL_STD = 10;
 
 // constexpr double c_a = 0.1;
 
 // -------------------------------------------------- //
-// MatrixXd R1 = Matrix2d::Identity() * GYRO_STD * GYRO_STD * INIT_VEL_STD * INIT_VEL_STD + Matrix2d::Identity() * ACCEL_STD * ACCEL_STD;
-// // MatrixXd R1 = Matrix2d::Constant(2, 2, GYRO_STD* INIT_VEL_STD + ACCEL_STD);
+// MatrixXd R1 = Matrix2d::Identity() * getGyro_std() * getGyro_std() * INIT_VEL_STD * INIT_VEL_STD + Matrix2d::Identity() * ACCEL_STD * ACCEL_STD;
+// // MatrixXd R1 = Matrix2d::Constant(2, 2, getGyro_std()* INIT_VEL_STD + ACCEL_STD);
 // MatrixXd R2 = MatrixXd::Constant(1, 1, num_R2);
 // MatrixXd nG = MatrixXd::Constant(3, 1, num_nG);
 
@@ -53,8 +53,8 @@ void KalmanFilter::predictionStep(GyroMeasurement gyro, double dt)
         Matrix3d F = Matrix3d::Identity() + omega_skew * dt;  // F matrix
 
         // Predict the new state
-        state = F * state + dt * x_skew * nG;
-        Matrix3d sigma_G = GYRO_STD * GYRO_STD * Matrix3d::Identity();
+        state = F * state + dt * x_skew * getnG();
+        Matrix3d sigma_G = getGyro_std() * getGyro_std() * Matrix3d::Identity();
         Matrix3d Q = dt * dt * x_skew * sigma_G * x_skew;
         R31 = state(0);
         R32 = state(1);
@@ -93,8 +93,8 @@ void KalmanFilter::measurementStep1(AccelMeasurement accel, GyroMeasurement gyro
         double ay_centripetal = vt * wz;       
         double az_centripetal = -vt * wx;      
 
-        double ay_corrected = ay - ay_centripetal - c_a * alpha(0);
-        double az_corrected = az - az_centripetal - c_a * alpha(1);
+        double ay_corrected = ay - ay_centripetal - getc_a() * alpha(0);
+        double az_corrected = az - az_centripetal - getc_a() * alpha(1);
 
         MatrixXd H1(2, 3);
         H1 << 0, 9.81, 0,
@@ -105,7 +105,7 @@ void KalmanFilter::measurementStep1(AccelMeasurement accel, GyroMeasurement gyro
 
         VectorXd y = z1 - H1 * state;
 
-        MatrixXd S1 = H1 * cov * H1.transpose() + R1 +  0.5*c_a*c_a*(alpha(0)*alpha(0) + alpha(1)*alpha(1))*Matrix2d::Identity();//+ 1e-9 * MatrixXd::Identity(H1.rows(), H1.rows());;
+        MatrixXd S1 = H1 * cov * H1.transpose() + getR1() +  0.5*getc_a()*getc_a()*(alpha(0)*alpha(0) + alpha(1)*alpha(1))*Matrix2d::Identity();//+ 1e-9 * MatrixXd::Identity(H1.rows(), H1.rows());;
         MatrixXd K1 = cov * H1.transpose() * S1.inverse();
 
         state = state + K1 * y;
@@ -153,7 +153,7 @@ void KalmanFilter::measurementStep2()
 
         //double y = z2 - H2 * state;
 
-        MatrixXd S2 = H2 * cov * H2.transpose() + R2 ;//+ 1e-9 * MatrixXd::Identity(H2.rows(), H2.rows());;
+        MatrixXd S2 = H2 * cov * H2.transpose() + getR2() ;//+ 1e-9 * MatrixXd::Identity(H2.rows(), H2.rows());;
         MatrixXd K2 = cov * H2.transpose() * S2.inverse();
 
         state = state + K2 * y;
@@ -219,16 +219,18 @@ VehicleState KalmanFilter::getVehicleState()
     return VehicleState();
 }
 
-void KalmanFilter::setParameters(double gyro_noise_std, double gyro_bias, double accel_noise_std, double accel_bias, double odo_noise_std, double odo_bias, double c_a, double num_R2, double num_nG, double accel_bias_std, double gyro_bias_std)
+void KalmanFilter::setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias)
 {
-    ACCEL_STD = accel_noise_std;
-    GYRO_STD = gyro_noise_std;
-    INIT_VEL_STD = gyro_bias;
-    c_a = c_a;
-    
-    R1 = Matrix2d::Identity() * gyro_noise_std * gyro_noise_std * accel_noise_std * accel_noise_std + Matrix2d::Identity() * gyro_bias * gyro_bias;
-    R2 = MatrixXd::Constant(1, 1, num_R2);
-    nG = MatrixXd::Constant(3, 1, num_nG);
+    setAccelNoiseStd(accel_std);
+    setGyroNoiseStd(gyro_std);
+    setInitVelNoiseStd(init_vel_std);
+    setc_a(c_a);
+    Matrix2d R1 = Matrix2d::Identity() * gyro_std * gyro_std * accel_std * accel_std + Matrix2d::Identity() * gyro_bias * gyro_bias;
+    MatrixXd R2 = MatrixXd::Constant(1, 1, num_R2);
+    MatrixXd nG = MatrixXd::Constant(3, 1, num_nG);
+    setR1(R1);
+    setR2(R2);
+    setnG(nG);
 }
 
 void KalmanFilter::predictionStep(double dt){}

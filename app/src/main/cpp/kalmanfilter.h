@@ -28,11 +28,33 @@ class KalmanFilterBase
         MatrixXd getCovariance()const {return m_covariance;}
         void setState(const VectorXd& state ) {m_state = state; m_initialised = true;}
         void setCovariance(const MatrixXd& cov ){m_covariance = cov;}
+        double getAccel_std() const {return ACCEL_STD;}
+        double getGyro_std() const {return GYRO_STD;}
+        double getInit_vel_std() const {return INIT_VEL_STD;}
+        double getc_a() const {return c_a;}
+        Eigen::Matrix2d getR1() const {return R1;}
+        Eigen::MatrixXd getR2() const {return R2;}
+        Eigen::MatrixXd getnG() const {return nG;}
+        void setAccelNoiseStd(double std) {ACCEL_STD = std;}
+        void setGyroNoiseStd(double std) {GYRO_STD = std;}
+        void setInitVelNoiseStd(double std) {INIT_VEL_STD = std;}
+        void setc_a(double std) {c_a = std;}
+        void setR1(Eigen::Matrix2d std) {R1 = std;}
+        void setR2(Eigen::MatrixXd std) {R2 = std;}
+        void setnG(Eigen::MatrixXd std) {nG = std;}
+
 
     private:
         bool m_initialised;
         VectorXd m_state;
         MatrixXd m_covariance;
+            double ACCEL_STD;
+    double GYRO_STD;
+    double INIT_VEL_STD;
+    double c_a;
+    Eigen::Matrix2d R1;
+    Eigen::MatrixXd R2;
+    Eigen::MatrixXd nG;
 };
 
 class KalmanFilterRoadSlopeBase
@@ -56,11 +78,20 @@ class KalmanFilterRoadSlopeBase
         MatrixXd getCovariance()const {return m_covariance;}
         void setState(const VectorXd& state ) {m_state = state; m_initialised = true;}
         void setCovariance(const MatrixXd& cov ){m_covariance = cov;}
+        double getAccel_std() const {return ACCEL_STD;}
+        double getGyro_std() const {return GYRO_STD;}
+        double getInit_vel_std() const {return INIT_VEL_STD;}
+        void setAccelNoiseStd(double std) {ACCEL_STD = std;}
+        void setGyroNoiseStd(double std) {GYRO_STD = std;}
+        void setInitVelNoiseStd(double std) {INIT_VEL_STD = std;}
 
     private:
         bool m_initialised;
         VectorXd m_state;
         MatrixXd m_covariance;
+                    double ACCEL_STD;
+    double GYRO_STD;
+    double INIT_VEL_STD;
 };
 
 class KalmanFilter : public KalmanFilterBase
@@ -76,7 +107,7 @@ class KalmanFilter : public KalmanFilterBase
         void predictionStep(GyroMeasurement gyro, double dt);
         void measurementStep1(AccelMeasurement accel, GyroMeasurement gyro, double v_t, Vector2d alpha);
         void measurementStep2();
-        void setKalmanParameters(double c_a, double num_R2, double num_nG, double ACCEL_BIAS, double GYRO_BIAS, double ODO_STD, double ODO_BIAS, double COR);
+        void setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias);
 
 };
 
@@ -89,6 +120,8 @@ class KalmanFilterRoadSlope : public KalmanFilterRoadSlopeBase
 
         void predictionStep(double dt);
         void measurementStep(AccelMeasurement accel, GyroMeasurement gyro, double v_t, double dt);
+        void setParameters(double accel_std, double gyro_std, double init_vel_std);
+
 };
 
 
