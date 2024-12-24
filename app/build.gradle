@@ -5,11 +5,11 @@ plugins {
 
 android {
     compileSdk 34
-
+    namespace 'com.example.pitchApp_v2'
     defaultConfig {
         applicationId "com.example.pitchApp_v2"
         minSdk 21
-        targetSdk 34
+        targetSdk 30
         versionCode 1
         versionName "1.0"
         externalNativeBuild {
@@ -21,6 +21,9 @@ android {
             abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
 
+    }
+    lintOptions {
+        disable 'ExpiredTargetSdkVersion' // Disable the lint warning for targetSdk version
     }
     externalNativeBuild {
         cmake {
@@ -47,6 +50,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    task copySharedLibs(type: Copy) {
+    from "${buildDir}/intermediates/cmake/debug/obj" // Path where .so files are generated
+    into "src/main/jniLibs" // Destination folder
+
+
+}
+
 }
 
 dependencies {

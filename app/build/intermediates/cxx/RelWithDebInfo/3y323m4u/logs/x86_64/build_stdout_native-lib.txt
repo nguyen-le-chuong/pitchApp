@@ -1,0 +1,2 @@
+ninja: Entering directory `/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/x86_64'
+ninja: no work to do.

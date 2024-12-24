@@ -1,0 +1,1 @@
+/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/RelWithDebInfo/3y323m4u/obj/armeabi-v7a

@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.pitchApp_v2"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = 21
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
 
@@ -36,7 +36,7 @@ android {
     externalNativeBuild {
         cmake {
             path = file("src/main/cpp/CMakeLists.txt")
-            version = "3.22.1"
+            version = "3.30.3"
         }
     }
     buildFeatures {

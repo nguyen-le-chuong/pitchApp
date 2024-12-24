@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pitchkf"
+rootProject.name = "pitchApp_v2"
 include(":app")
  

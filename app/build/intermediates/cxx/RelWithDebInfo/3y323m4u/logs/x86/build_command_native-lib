@@ -1,0 +1,4 @@
+/home/chuongnl1/Android/Sdk/cmake/3.30.3/bin/ninja \
+  -C \
+  /home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/x86 \
+  native-lib
