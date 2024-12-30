@@ -16,19 +16,27 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accelerater's Std: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000" />
             <Button
                 android:id="@+id/minusAccelStd"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/accelStdInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="ACCEL_STD"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusAccelStd"
@@ -41,7 +49,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GYRO_STD: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusGyroStd"
                 android:layout_width="50dp"
@@ -52,9 +67,9 @@
                 android:id="@+id/gyroStdInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="GYRO_STD"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusGyroStd"
@@ -68,20 +83,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="VEL_STD: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusInitVelStd"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/initVelStdInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="INIT_VEL_STD"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusInitVelStd"
@@ -94,20 +115,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="c_a: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusCA"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/cAInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="c_a"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusCA"
@@ -120,20 +147,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="num_R2: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusNumR2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/numR2Input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="num_R2"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusNumR2"
@@ -146,7 +179,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="num_RG: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusNumNG"
                 android:layout_width="50dp"
@@ -157,9 +197,9 @@
                 android:id="@+id/numNGInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="num_RG"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusNumNG"
@@ -173,19 +213,27 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ACCEL_BIAS: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusAccelBias"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/accelBiasInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="ACCEL_BIAS"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusAccelBias"
@@ -200,45 +248,59 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GYRO_BIAS: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusGyroBias"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/gyroBiasInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="GYRO_BIAS"
+                android:layout_weight="5"
                 android:inputType="numberDecimal" />
 
             <Button
                 android:id="@+id/plusGyroBias"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="+"
+                android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Covarience: "
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"/>
             <Button
                 android:id="@+id/minusCor"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="-" />
-
             <EditText
                 android:id="@+id/corInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Covarience"
-                android:inputType="numberDecimal" />
+                android:layout_weight="5"
+                android:inputType="numberDecimal"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/plusCor"
@@ -261,7 +323,8 @@
             android:layout_height="wrap_content"
             android:text="Pitch: 0.0"
             android:paddingTop="16dp"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/roadSlopeValue"
@@ -269,7 +332,8 @@
             android:layout_height="wrap_content"
             android:text="Road Slope: 0.0"
             android:paddingTop="8dp"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/pitchMinusSlopeValue"
@@ -277,7 +341,8 @@
             android:layout_height="wrap_content"
             android:text="Pitch - Road Slope: 0.0"
             android:paddingTop="8dp"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#000000"/>
 
     </LinearLayout>
 </ScrollView>

@@ -3,30 +3,30 @@
 3    package="com.example.pitchApp_v2.test" >
 4
 5    <uses-sdk
-5-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:5:5-74
+5-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:5:15-41
-7        android:targetSdkVersion="30" />
-7-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:5:42-71
+6-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:5:15-41
+7        android:targetSdkVersion="34" />
+7-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:11:5-15:73
+9-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:11:5-15:73
 10        android:name="android.test.InstrumentationTestRunner"
-10-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:11:22-75
+10-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:11:22-75
 11        android:functionalTest="false"
-11-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:14:22-52
+11-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:13:22-53
+12-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:13:22-53
 13        android:label="Tests for com.example.pitchApp_v2"
-13-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:15:22-71
+13-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:15:22-71
 14        android:targetPackage="com.example.pitchApp_v2" />
-14-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:12:22-69
+14-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:12:22-69
 15
 16    <application android:debuggable="true" >
-16-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:7:5-9:19
+16-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:7:5-9:19
 17        <uses-library android:name="android.test.runner" />
-17-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:8:9-60
-17-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7615144381051689078.xml:8:23-57
+17-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:8:9-60
+17-->/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5131454216250129993.xml:8:23-57
 18    </application>
 19
 20</manifest>

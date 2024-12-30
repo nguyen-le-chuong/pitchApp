@@ -1,2 +1,0 @@
-ninja: Entering directory `/home/chuongnl1/project/pitchApp_v2/app/.cxx/RelWithDebInfo/3y323m4u/arm64-v8a'
-ninja: no work to do.

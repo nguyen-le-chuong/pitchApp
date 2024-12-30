@@ -78,7 +78,7 @@ static time_t prev_ts = 0;
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_example_pitchApp_v2_MainActivity_initKalman(JNIEnv *env, jobject /* this */, jdouble cor) {
+Java_com_example_pitchApp_1v2_MainActivity_initKalman(JNIEnv *env, jobject, jfloat cor) {
     Eigen::VectorXd RotationState(3);
     Eigen::VectorXd SlopeState(3);
     Eigen::MatrixXd cov = Eigen::MatrixXd::Identity(3, 3) * cor;
@@ -92,15 +92,15 @@ Java_com_example_pitchApp_v2_MainActivity_initKalman(JNIEnv *env, jobject /* thi
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_example_pitchApp_v2_MainActivity_setKalmanParameters(
+Java_com_example_pitchApp_1v2_MainActivity_setKalmanParameters(
         JNIEnv *env,
-        jobject /* this */,
-        jdoubleArray parameters) {
+        jobject,
+        jfloatArray parameters) {
 
     jsize length = env->GetArrayLength(parameters);
     if (length != 9) return;  // Ensure the array has the correct number of parameters
 
-    jdouble *params = env->GetDoubleArrayElements(parameters, nullptr);
+    jfloat *params = env->GetFloatArrayElements(parameters, nullptr);
 
     // Set the parameters in the simulation
     mSimulation.setKalmanParameters(loadSimulation4Parameters(), 
@@ -108,14 +108,14 @@ Java_com_example_pitchApp_v2_MainActivity_setKalmanParameters(
             params[5], params[6], params[7], params[8]
     );
 
-    env->ReleaseDoubleArrayElements(parameters, params, 0);
+    env->ReleaseFloatArrayElements(parameters, params, 0);
 }
 
 extern "C"
 JNIEXPORT jobject JNICALL
-Java_com_example_pitchApp_v2_MainActivity_updateKalmanState(
+Java_com_example_pitchApp_1v2_MainActivity_updateKalmanState(
         JNIEnv *env,
-        jobject /* this */,
+        jobject,
         jfloatArray accData,
         jfloatArray gyroData,
         jlong timestamp) {
@@ -146,12 +146,11 @@ Java_com_example_pitchApp_v2_MainActivity_updateKalmanState(
         return nullptr; // No valid time difference yet
     }
 
-    double h_rear = 0.0, h_front = 0.0;
-    double odo = 0.0;
+    double odo = 0;
     Eigen::Vector2d alpha;
 
-    mSimulation.update(accVec, gyroVec, odo, h_rear, h_front, ts, dt, alpha);
-
+    mSimulation.update(accVec, gyroVec, odo, ts, dt, alpha);
+    mSimulation.updateRoadSlope(accVec, gyroVec, odo, dt);
     double pitch = mSimulation.returnPitch();
     double slope = mSimulation.returnSlope();
 

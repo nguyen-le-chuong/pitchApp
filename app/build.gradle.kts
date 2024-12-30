@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.example.pitchApp_v2"
         minSdk = 21
-        targetSdk = 30
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

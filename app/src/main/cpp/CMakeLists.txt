@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 # include_directories("/home/eigen-doc") 
 set(Eigen3_DIR "/home/Eigen3/share/eigen3/cmake")
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(SRC_DIR ${CMAKE_SOURCE_DIR})
 set(SOURCES

@@ -139,13 +139,13 @@ void Simulation::writeVectorsToCSV(const std::string& filename) {
 
 
 
-void Simulation::update(Eigen::VectorXd acc, Eigen::VectorXd gyro, double odo, double h_rear, double h_front, time_t m_time, double delta_t, Eigen::Vector2d& alpha)
+void Simulation::update(Eigen::VectorXd acc, Eigen::VectorXd gyro, double odo, time_t m_time, double delta_t, Eigen::Vector2d& alpha)
 {
     m_sim_parameters.time_step = delta_t;
     if (m_is_running && !m_is_paused)
     {
             // Update Motion (for Front and Rear ) 
-            m_car.update(h_rear, h_front);
+            m_car.update(0, 0);
             m_vehicle_pitch_history.push_back(m_car.getWheelState().pitch);
             if (m_kalman_filter.isInitialised())
             {
@@ -281,3 +281,28 @@ SimulationParams loadSimulation4Parameters()
 
     return sim_params;
 }
+
+//void Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::VectorXd& velocity)
+//{
+//    // Assume velocity is a 3D vector (vx, vy, vz)
+//    if (velocity.size() != 3)
+//    {
+//        velocity = Eigen::VectorXd::Zero(3); // Initialize velocity to zero if not already initialized
+//    }
+//
+//    // Compensate for gyroscope orientation to adjust accelerometer data
+//    // Assuming the gyroscope data provides the angular rate
+//    Eigen::Matrix3d rotationMatrix = Eigen::Matrix3d::Identity(); // Replace with your rotation calculation if needed
+//    // For example, using gyro data: rotationMatrix = computeRotationMatrix(gyro);
+//
+//    // Adjust accelerometer data using rotation matrix
+//    Eigen::VectorXd adjustedAcc = rotationMatrix * acc;
+//
+//    // Subtract gravity (assuming z-axis alignment with gravity)
+//    Eigen::Vector3d gravity(0, 0, 9.81); // Replace with your gravity vector if not z-aligned
+//    adjustedAcc -= gravity;
+//
+//    // Integrate acceleration to calculate velocity
+//    velocity += adjustedAcc * delta_t;
+//}
+
