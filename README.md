@@ -40,8 +40,13 @@ export PATH=$ANDROID_HOME/ndk/25.2.9519653:$PATH
 
 custom your `local.properties`
 ## Build and Run the Project
+Build:
 ```
 ./gradlew build
+```
+Clean:
+```
+./gradlew clean
 ```
 ## Files structure
 Pitch Estimation: `app/src/main/cpp/kalmanfilter.cpp`
