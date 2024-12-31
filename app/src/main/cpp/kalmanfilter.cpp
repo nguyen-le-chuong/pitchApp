@@ -213,7 +213,7 @@ VehicleState KalmanFilter::getVehicleState()
         // }
         double roll = std::atan2(state[1], state[2]);
         double pitch = std::atan2(-state[0], (state[1]/std::sin(roll)));
-        double pitch_degree = pitch;
+        double pitch_degree = pitch*180.0 / M_PI;
         return VehicleState(state[0], state[1], state[2], pitch_degree, roll);
     }
     return VehicleState();
