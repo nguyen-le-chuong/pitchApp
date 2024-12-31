@@ -60,14 +60,14 @@ void Simulation::reset(VectorXd RotationState, VectorXd SlopeState, MatrixXd cov
     std::cout << "Simulation: Reset" << std::endl;
 }
 
-void Simulation::setKalmanParameters(SimulationParams sim_params, double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias, double cor)
+void Simulation::setKalmanParameters(SimulationParams sim_params, double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double accel_bias, double gyro_bias, double cor)
 {
     SimulationParams m_sim_parameters = sim_params;
     m_sim_parameters.gyro_noise_std = gyro_std;
     m_sim_parameters.gyro_bias = gyro_bias;
     m_sim_parameters.accel_noise_std = accel_std;
     m_sim_parameters.accel_bias = accel_bias;
-    m_kalman_filter.setParameters(accel_std, gyro_std, init_vel_std, c_a, num_R2, num_nG, accel_bias, gyro_bias);
+    m_kalman_filter.setParameters(accel_std, gyro_std, init_vel_std, c_a, num_R2, accel_bias, gyro_bias);
     m_road_slope.setParameters(accel_std, gyro_std, init_vel_std);
     // m_sim_parameters.odo_noise_std = odo_noise_std;
     // m_sim_parameters.odo_bias = odo_bias;

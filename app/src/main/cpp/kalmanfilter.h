@@ -107,7 +107,7 @@ class KalmanFilter : public KalmanFilterBase
         void predictionStep(GyroMeasurement gyro, double dt);
         void measurementStep1(AccelMeasurement accel, GyroMeasurement gyro, double v_t, Vector2d alpha);
         void measurementStep2();
-        void setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias);
+        void setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double accel_bias, double gyro_bias);
 
 };
 

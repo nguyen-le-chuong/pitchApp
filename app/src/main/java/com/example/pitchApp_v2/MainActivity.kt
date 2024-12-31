@@ -182,7 +182,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         // Initialize SensorManager and sensors
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-        acceler_bias = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER_UNCALIBRATED)
         gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
         val accelStdInput = findViewById<EditText>(R.id.accelStdInput)
         val gyroStdInput = findViewById<EditText>(R.id.gyroStdInput)
@@ -191,7 +190,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val initVelInput = findViewById<EditText>(R.id.initVelStdInput)
         val cAInput = findViewById<EditText>(R.id.cAInput)
         val numR2Input = findViewById<EditText>(R.id.numR2Input)
-        val numNGInput = findViewById<EditText>(R.id.numNGInput)
         val corInput = findViewById<EditText>(R.id.corInput)
 
         // val pitchTextView = findViewById<TextView>(R.id.pitchValue)
@@ -213,8 +211,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val btnDecCA = findViewById<Button>(R.id.minusCA)
         val btnIncNumR2 = findViewById<Button>(R.id.plusNumR2)
         val btnDecNumR2 = findViewById<Button>(R.id.minusNumR2)
-        val btnIncNumNG = findViewById<Button>(R.id.plusNumNG)
-        val btnDecNumNG = findViewById<Button>(R.id.minusNumNG)
         val btnIncCor = findViewById<Button>(R.id.plusCor)
         val btnDecCor = findViewById<Button>(R.id.minusCor)
 
@@ -225,7 +221,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         if (initVelInput.text.isEmpty()) initVelInput.setText(INIT_VEL_STD.toString())
         if (cAInput.text.isEmpty()) cAInput.setText(C_A.toString())
         if (numR2Input.text.isEmpty()) numR2Input.setText(NUM_R2.toString())
-        if (numNGInput.text.isEmpty()) numNGInput.setText(NUM_NG.toString())
         if (corInput.text.isEmpty()) corInput.setText(COR.toString())
 
         btnReset.setOnClickListener {
@@ -236,9 +231,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val initVel = initVelInput.text.toString().toFloatOrNull() ?: 0.0f
             val cA = cAInput.text.toString().toFloatOrNull() ?: 0.0f
             val numR2 = numR2Input.text.toString().toFloatOrNull() ?: 0.0f
-            val numNG = numNGInput.text.toString().toFloatOrNull() ?: 0.0f
             val cor = corInput.text.toString().toFloatOrNull() ?: 0.0f
-            val paramsArray = floatArrayOf(accelStd, gyroStd, initVel, cA, numR2, numNG, accelBias, gyroBias, cor)
+            val paramsArray = floatArrayOf(accelStd, gyroStd, initVel, cA, numR2, accelBias, gyroBias, cor)
 
             setKalmanParameters(paramsArray)
             initKalman(cor)
@@ -252,7 +246,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         setupIncrementDecrement(btnIncInitVel, btnDecInitVel, initVelInput, 0.01f)
         setupIncrementDecrement(btnIncCA, btnDecCA, cAInput, 0.01f)
         setupIncrementDecrement(btnIncNumR2, btnDecNumR2, numR2Input, 0.01f)
-        setupIncrementDecrement(btnIncNumNG, btnDecNumNG, numNGInput, 0.01f)
         setupIncrementDecrement(btnIncCor, btnDecCor, corInput, 0.01f)
 
         // Register sensors
@@ -353,7 +346,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         const val INIT_VEL_STD = 10.0
         const val C_A = 0.1
         const val NUM_R2 = 0.009
-        const val NUM_NG = 0.01
         const val ACCEL_BIAS = 0.001
         const val GYRO_BIAS = 0.001
         const val ODO_STD = 0.001

@@ -219,7 +219,7 @@ VehicleState KalmanFilter::getVehicleState()
     return VehicleState();
 }
 
-void KalmanFilter::setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias)
+void KalmanFilter::setParameters(double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double accel_bias, double gyro_bias)
 {
     setAccelNoiseStd(accel_std);
     setGyroNoiseStd(gyro_std);
@@ -227,7 +227,7 @@ void KalmanFilter::setParameters(double accel_std, double gyro_std, double init_
     setc_a(c_a);
     Matrix2d R1 = Matrix2d::Identity() * gyro_std * gyro_std * accel_std * accel_std + Matrix2d::Identity() * gyro_bias * gyro_bias;
     MatrixXd R2 = MatrixXd::Constant(1, 1, num_R2);
-    MatrixXd nG = MatrixXd::Constant(3, 1, num_nG);
+    MatrixXd nG = MatrixXd::Constant(3, 1, gyro_std * gyro_std);
     setR1(R1);
     setR2(R2);
     setnG(nG);

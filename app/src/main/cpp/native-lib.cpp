@@ -30,14 +30,14 @@ Java_com_example_pitchApp_1v2_MainActivity_setKalmanParameters(
         jfloatArray parameters) {
 
     jsize length = env->GetArrayLength(parameters);
-    if (length != 9) return;  // Ensure the array has the correct number of parameters
+    if (length != 8) return;  // Ensure the array has the correct number of parameters
 
     jfloat *params = env->GetFloatArrayElements(parameters, nullptr);
 
     // Set the parameters in the simulation
     mSimulation.setKalmanParameters(loadSimulation4Parameters(), 
             params[0], params[1], params[2], params[3], params[4],
-            params[5], params[6], params[7], params[8]
+            params[5], params[6], params[7]
     );
 
     env->ReleaseFloatArrayElements(parameters, params, 0);

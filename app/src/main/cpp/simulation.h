@@ -60,8 +60,8 @@ class Simulation
         void reset(VectorXd RotationState, VectorXd SlopeState, MatrixXd cov);
         void update(Eigen::VectorXd acc, Eigen::VectorXd gyro, double odo, time_t m_time, double delta_t, Eigen::Vector2d& alpha);
         void updateRoadSlope(Eigen::VectorXd acc, Eigen::VectorXd gyro, double odo, double delta_t);
-        void setKalmanParameters(SimulationParams sim_params, double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double num_nG, double accel_bias, double gyro_bias, double cor);
-        Eigen::Vector3d calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::Vector3d& velocity);
+        void setKalmanParameters(SimulationParams sim_params, double accel_std, double gyro_std, double init_vel_std, double c_a, double num_R2, double accel_bias, double gyro_bias, double cor);
+        void calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::Vector3d& velocity);
 
         double returnPitch();
         double returnSlope();
