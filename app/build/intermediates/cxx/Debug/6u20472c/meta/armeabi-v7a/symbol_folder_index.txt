@@ -1,1 +1,0 @@
-/home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/Debug/6u20472c/obj/armeabi-v7a

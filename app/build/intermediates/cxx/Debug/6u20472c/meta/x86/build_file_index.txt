@@ -1,1 +1,0 @@
-/home/chuongnl1/project/pitchApp_v2/app/src/main/cpp/CMakeLists.txt

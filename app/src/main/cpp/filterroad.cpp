@@ -101,7 +101,7 @@ SlopeState KalmanFilterRoadSlope::getVehicleState()
         VectorXd state = getState(); //
         // std::cout << state[0] << " " <<  state[1] << " " << state[2] << std::endl; 
         double slope = asin(state[2]/9.81);
-        double slope_degree = -slope*180.0 / M_PI;
+        double slope_degree = -slope;
         return SlopeState(state[0], state[1], state[2], slope_degree);
     }
     return SlopeState();

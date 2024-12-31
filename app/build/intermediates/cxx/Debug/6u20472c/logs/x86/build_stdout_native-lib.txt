@@ -1,9 +1,0 @@
-ninja: Entering directory `/home/chuongnl1/project/pitchApp_v2/app/.cxx/Debug/6u20472c/x86'
-[1/8] Building CXX object CMakeFiles/native-lib.dir/utils.cpp.o
-[2/8] Building CXX object CMakeFiles/native-lib.dir/sensors.cpp.o
-[3/8] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
-[4/8] Building CXX object CMakeFiles/native-lib.dir/simulation.cpp.o
-[5/8] Building CXX object CMakeFiles/native-lib.dir/readData.cpp.o
-[6/8] Building CXX object CMakeFiles/native-lib.dir/filterroad.cpp.o
-[7/8] Building CXX object CMakeFiles/native-lib.dir/kalmanfilter.cpp.o
-[8/8] Linking CXX shared library /home/chuongnl1/project/pitchApp_v2/app/build/intermediates/cxx/Debug/6u20472c/obj/x86/libnative-lib.so

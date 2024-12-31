@@ -282,27 +282,34 @@ SimulationParams loadSimulation4Parameters()
     return sim_params;
 }
 
-//void Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::VectorXd& velocity)
-//{
-//    // Assume velocity is a 3D vector (vx, vy, vz)
-//    if (velocity.size() != 3)
-//    {
-//        velocity = Eigen::VectorXd::Zero(3); // Initialize velocity to zero if not already initialized
-//    }
-//
-//    // Compensate for gyroscope orientation to adjust accelerometer data
-//    // Assuming the gyroscope data provides the angular rate
-//    Eigen::Matrix3d rotationMatrix = Eigen::Matrix3d::Identity(); // Replace with your rotation calculation if needed
-//    // For example, using gyro data: rotationMatrix = computeRotationMatrix(gyro);
-//
-//    // Adjust accelerometer data using rotation matrix
-//    Eigen::VectorXd adjustedAcc = rotationMatrix * acc;
-//
-//    // Subtract gravity (assuming z-axis alignment with gravity)
-//    Eigen::Vector3d gravity(0, 0, 9.81); // Replace with your gravity vector if not z-aligned
-//    adjustedAcc -= gravity;
-//
-//    // Integrate acceleration to calculate velocity
-//    velocity += adjustedAcc * delta_t;
-//}
+Eigen::Vector3d Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::Vector3d velocity)
+{
+    // Check if velocity is properly initialized
+    if (velocity.size() != 3)
+    {
+        velocity = Eigen::VectorXd::Zero(3); // Initialize velocity to zero if not already initialized
+    }
+
+    // Step 1: Compensate for biases
+    Eigen::VectorXd acc_corrected = acc - Eigen::VectorXd::Constant(gyro.size(), m_sim_parameters.accel_bias); // Subtract accelerometer bias
+    Eigen::VectorXd gyro_corrected = gyro - Eigen::VectorXd::Constant(gyro.size(), m_sim_parameters.gyro_bias);
+
+
+    // Step 2: Filter noise (if necessary)
+    // Here we assume noise filtering has been handled by the sensor class or external Kalman filter.
+    // If not, you can use a moving average or low-pass filter to smooth the data.
+
+    // Step 3: Apply gyroscope data to compute orientation changes (optional for advanced corrections)
+    Eigen::Matrix3d rotationMatrix = Eigen::Matrix3d::Identity();
+
+    Eigen::VectorXd adjustedAcc = rotationMatrix * acc_corrected;
+
+    // Step 5: Compensate for gravity
+    Eigen::Vector3d gravity(0, 0, 9.81); // Standard gravity vector (aligned with z-axis)
+    adjustedAcc -= gravity;
+
+    // Step 6: Integrate acceleration to compute velocity
+    velocity += adjustedAcc * delta_t;
+    return velocity;
+}
 
