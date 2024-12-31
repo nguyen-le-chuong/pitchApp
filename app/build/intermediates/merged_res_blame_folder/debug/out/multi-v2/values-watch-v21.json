@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.pitchApp_v2.app-mergeDebugResources-20:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/chuongnl1/.gradle/caches/8.9/transforms/2ea280017335af23c71f7c76a1dc2162/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}
