@@ -282,7 +282,7 @@ SimulationParams loadSimulation4Parameters()
     return sim_params;
 }
 
-Eigen::Vector3d Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::Vector3d velocity)
+void Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::VectorXd gyro, double delta_t, Eigen::Vector3d& velocity)
 {
     // Check if velocity is properly initialized
     if (velocity.size() != 3)
@@ -310,6 +310,5 @@ Eigen::Vector3d Simulation::calculateVelocity(Eigen::VectorXd acc, Eigen::Vector
 
     // Step 6: Integrate acceleration to compute velocity
     velocity += adjustedAcc * delta_t;
-    return velocity;
 }
 

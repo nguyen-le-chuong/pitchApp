@@ -7,6 +7,7 @@
 static Simulation mSimulation;
 static time_t prev_ts = 0;
 Eigen::Vector3d velocity = Eigen::Vector3d::Zero();
+Eigen::Vector2d alpha(0.001, 0.001);
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_pitchApp_1v2_MainActivity_initKalman(JNIEnv *env, jobject, jfloat cor) {
@@ -78,8 +79,8 @@ Java_com_example_pitchApp_1v2_MainActivity_updateKalmanState(
     }
 
     
-    Eigen::Vector2d alpha;
-    velocity = mSimulation.calculateVelocity(accVec, gyroVec, dt, velocity);
+
+    mSimulation.calculateVelocity(accVec, gyroVec, dt, velocity);
     mSimulation.update(accVec, gyroVec, velocity(0), ts, dt, alpha);
     mSimulation.updateRoadSlope(accVec, gyroVec, velocity(0), dt);
     double pitch = mSimulation.returnPitch();
